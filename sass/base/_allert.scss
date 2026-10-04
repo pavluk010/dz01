@@ -1,0 +1,51 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "placeholders" as *;
+
+.message {
+  @extend %alert-base;
+
+  &__title {
+    margin: 0 0 10px;
+    font-size: 20px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  &--success {
+    @include alert-theme(
+      $success-bg,
+      $success-text,
+      $success-border
+    );
+  }
+
+  &--info {
+    @include alert-theme(
+      $info-bg,
+      $info-text,
+      $info-border
+    );
+  }
+
+  &--warning {
+    @include alert-theme(
+      $warning-bg,
+      $warning-text,
+      $warning-border
+    );
+  }
+
+  &--error {
+    @include alert-theme(
+      $error-bg,
+      $error-text,
+      $error-border
+    );
+  }
+}
+
+
